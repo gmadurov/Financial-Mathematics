@@ -1,0 +1,50 @@
+
+% Automatically added code
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+% End of automatically added code
+
+% Set the overall layout of the tree
+\tikzstyle{level 1}=[level distance=4cm, sibling distance=3.5cm,->]
+\tikzstyle{level 2}=[level distance=4cm, sibling distance=2cm,->]
+
+% Define styles for bags and leafs
+\tikzstyle{bag} = [text width=2em, text centered]
+\tikzstyle{end} = []
+
+% The sloped option gives rotated edge labels. Personally
+% I find sloped labels a bit difficult to read. Remove the sloped options
+% to get horizontal labels. 
+\begin{tikzpicture}[grow=right, sloped]
+\node[bag] {$\$ A$}
+    child {
+        node[bag] {$DS0$} 
+        child {
+            node[end, label=right:{ $DDS0$ }] {}
+            edge from parent
+            node[above] {}
+            node[below] {$  (1-p)^2 $};
+        }
+	edge from parent
+	node[above] {}
+	node[below] {$  (1-p) $};
+	}
+	child {
+        node[bag] {$DS0$} 
+        child {
+            node[end, label=right:{ $UDS0$ }] {}
+            edge from parent
+            node[above] {}
+            node[below] {$ p (1-p) $};
+	}
+	edge from parent
+	node[above] {}
+	node[below] {$ p  $};
+	};
+\end{tikzpicture}
+
+% Automatically added code
+\end{document}
+% End of automatically added code
