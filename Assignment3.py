@@ -129,6 +129,7 @@ def two_fund_theorem_from_matrix(mu, C, r, show=True, fig=None):
     W_min = inital_W(C)
     W_market = np.transpose(np.matmul(np.transpose(mu-r*ones), inv(C)) /
                             np.matmul((np.matmul(np.transpose(mu-r*ones), inv(C))), ones))
+    # W_market = ((mu-r*ones).T@ inv(C))/ (mu-r*ones).T@inv(C)@ones
     mew1, sigma21 = get_mewsigma2(mu, C, W_min, False)
     mew2, sigma22 = get_mewsigma2(mu, C, W_market, False)
     # if mew1 < mew2 and sigma21 < sigma22:
