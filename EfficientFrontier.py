@@ -119,7 +119,7 @@ def bmatrix(a):
     return '\n'.join(rv)
 
 
-print(bmatrix(np.transpose(mu)))
+# print(bmatrix(np.transpose(mu)))
 
 
 def two_fund_theorem_from_matrix(mu, C, r, show=True, fig=None):

@@ -507,7 +507,7 @@ K = 38
 S = 39
 r = 1 / 100
 v = r - 1 / 2 * sigma**2
-op = Option(S, sigma, number_of_periods, T, K, v, r, h=1)
+op = Option(S, sigma, number_of_periods, T, K, v, r, h=0)
 # op.make_binomial_tree()
 # print(op.BS)
 # op = Option(S, sigma, v, number_of_periods, T, K, r, h=0)
